@@ -1,6 +1,6 @@
 # POC-RTML-AGENT-001
 
-## Real-Time ML + RAG + LLM Alert Intelligence for Kubernetes Telemetry
+## Real-Time ML + RAG + LLM Alert Intelligence for Kubernetes Telemetry -- Learning POC
 
 ---
 
