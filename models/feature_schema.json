@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0.0",
+  "feature_window_seconds": 30,
+  "description": "Rolling-window features derived from pod telemetry",
+  "source_fields": {
+    "memory_usage_mb": "memory_current_mb",
+    "memory_limit_mb": "memory_limit_mb",
+    "cpu_usage_mcores": "cpu_current_mcores",
+    "error_rate_rps": "error_rate_current",
+    "request_rate_rps": "request_rate_current",
+    "latency_p95_ms": "latency_p95_current"
+  },
+  "ml_feature_columns": [
+    "memory_current_mb",
+    "memory_limit_mb",
+    "memory_ratio_current",
+    "memory_avg_5s",
+    "memory_avg_10s",
+    "memory_avg_30s",
+    "memory_slope_5s",
+    "memory_slope_10s",
+    "memory_slope_30s",
+    "memory_std_30s",
+    "cpu_current_mcores",
+    "cpu_avg_5s",
+    "cpu_avg_10s",
+    "cpu_avg_30s",
+    "cpu_slope_10s",
+    "error_rate_current",
+    "error_rate_avg_5s",
+    "error_rate_avg_30s",
+    "error_rate_slope_10s",
+    "request_rate_current",
+    "request_rate_avg_30s",
+    "request_rate_slope_10s",
+    "latency_p95_current",
+    "latency_p95_avg_30s",
+    "latency_p95_slope_10s",
+    "restart_count",
+    "deployment_age_minutes",
+    "recent_deployment_flag"
+  ],
+  "columns": [
+    {
+      "name": "memory_current_mb",
+      "type": "float"
+    },
+    {
+      "name": "memory_limit_mb",
+      "type": "float"
+    },
+    {
+      "name": "memory_ratio_current",
+      "type": "float"
+    },
+    {
+      "name": "memory_avg_5s",
+      "type": "float"
+    },
+    {
+      "name": "memory_avg_10s",
+      "type": "float"
+    },
+    {
+      "name": "memory_avg_30s",
+      "type": "float"
+    },
+    {
+      "name": "memory_slope_5s",
+      "type": "float"
+    },
+    {
+      "name": "memory_slope_10s",
+      "type": "float"
+    },
+    {
+      "name": "memory_slope_30s",
+      "type": "float"
+    },
+    {
+      "name": "memory_std_30s",
+      "type": "float"
+    },
+    {
+      "name": "cpu_current_mcores",
+      "type": "float"
+    },
+    {
+      "name": "cpu_avg_5s",
+      "type": "float"
+    },
+    {
+      "name": "cpu_avg_10s",
+      "type": "float"
+    },
+    {
+      "name": "cpu_avg_30s",
+      "type": "float"
+    },
+    {
+      "name": "cpu_slope_10s",
+      "type": "float"
+    },
+    {
+      "name": "error_rate_current",
+      "type": "float"
+    },
+    {
+      "name": "error_rate_avg_5s",
+      "type": "float"
+    },
+    {
+      "name": "error_rate_avg_30s",
+      "type": "float"
+    },
+    {
+      "name": "error_rate_slope_10s",
+      "type": "float"
+    },
+    {
+      "name": "request_rate_current",
+      "type": "float"
+    },
+    {
+      "name": "request_rate_avg_30s",
+      "type": "float"
+    },
+    {
+      "name": "request_rate_slope_10s",
+      "type": "float"
+    },
+    {
+      "name": "latency_p95_current",
+      "type": "float"
+    },
+    {
+      "name": "latency_p95_avg_30s",
+      "type": "float"
+    },
+    {
+      "name": "latency_p95_slope_10s",
+      "type": "float"
+    },
+    {
+      "name": "restart_count",
+      "type": "int"
+    },
+    {
+      "name": "deployment_age_minutes",
+      "type": "int"
+    },
+    {
+      "name": "recent_deployment_flag",
+      "type": "int"
+    }
+  ]
+}
