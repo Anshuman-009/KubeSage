@@ -1,6 +1,6 @@
 # Phase-Wise Documentation
 
-Deep architecture and design record for each build phase of POC-RTML-AGENT-001.
+Deep architecture and design record for each build phase of KubeSage.
 
 ---
 

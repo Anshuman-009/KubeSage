@@ -1,4 +1,4 @@
-# POC-RTML-AGENT-001
+# KubeSage
 
 ## Real-Time ML + RAG + LLM Alert Intelligence for Kubernetes Telemetry -- Learning POC
 
@@ -8,7 +8,7 @@
 
 This POC is a focused 10–12 hour learning experiment designed to understand how a real-time AI intelligence system works when live telemetry, ML prediction, RAG grounding, LLM explanation, WebSocket alerts, and agent-style orchestration come together.
 
-This is not a full KubeSage implementation.
+KubeSage is currently a focused learning POC — not yet a full production system.
 
 This POC exists to learn:
 
@@ -27,7 +27,7 @@ This POC exists to learn:
 
 ## 2. Final POC Definition
 
-POC-RTML-AGENT-001 is a FastAPI + React learning system that trains XGBoost models on historical or synthetic Kubernetes-style telemetry, streams live pod metrics through WebSockets, buffers the live stream for a short rolling window, generates ML predictions and future projections, retrieves related evidence from an operational archive using a RAG pipeline, sends prediction + evidence to a local LLM, and displays alerts plus grounded narratives in a React interface.
+KubeSage is a FastAPI + React learning system that trains XGBoost models on historical or synthetic Kubernetes-style telemetry, streams live pod metrics through WebSockets, buffers the live stream for a short rolling window, generates ML predictions and future projections, retrieves related evidence from an operational archive using a RAG pipeline, sends prediction + evidence to a local LLM, and displays alerts plus grounded narratives in a React interface.
 
 The system uses agent-style components to simulate a production AI workflow.
 
@@ -1344,7 +1344,7 @@ total_explanation_latency_ms
 ## 16. Project Folder Structure
 
 ```text
-poc-rtml-agent-rag/
+KubeSage/
   README.md
 
   data/
@@ -1893,7 +1893,7 @@ Write what failed
 Write what was learned about ML
 Write what was learned about RAG
 Write what was learned about LLMs
-Write how this maps to KubeSage
+Write the production roadmap
 Write how this maps to F1-AI
 ```
 
@@ -2027,9 +2027,9 @@ The POC is successful if:
 
 ---
 
-## 20. How This Maps to KubeSage
+## 20. Production Roadmap
 
-This POC directly maps to KubeSage.
+This POC establishes the foundation for production KubeSage.
 
 ```text
 POC telemetry simulator     -> real Prometheus/OpenTelemetry/Kubernetes metrics
@@ -2097,4 +2097,4 @@ The final learning outcome should be:
 I understand how intelligence enters a live software system.
 ```
 
-This is the correct foundation before building the full KubeSage and F1-AI systems.
+This is the correct foundation for evolving KubeSage into a production system and for applying the same pattern to F1-AI.

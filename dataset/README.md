@@ -1,6 +1,6 @@
 # KubeSage Production-Style Synthetic Dataset Pack
 
-Generated for `POC-RTML-AGENT-001`.
+Generated for `KubeSage`.
 
 This dataset pack is synthetic, but it is designed to behave like a production Kubernetes observability ecosystem. The goal is not to create random dummy data. The goal is to create connected datasets where telemetry, logs, Kubernetes events, deployment changes, incidents, runbooks, labels, and runtime outputs all make sense together.
 
@@ -11,7 +11,7 @@ This dataset pack is synthetic, but it is designed to behave like a production K
 This dataset pack supports the POC:
 
 ```text
-POC-RTML-AGENT-001
+KubeSage
 Real-Time ML + RAG + LLM Alert Intelligence for Kubernetes Telemetry
 ```
 

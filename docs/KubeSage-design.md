@@ -1,4 +1,4 @@
-# POC-RTML-AGENT-001
+# KubeSage
 
 ## Real-Time ML + RAG + LLM Alert Intelligence for Kubernetes Telemetry
 
@@ -8,7 +8,7 @@
 
 This POC is a 10–12 hour learning experiment designed to understand how real-time telemetry can be converted into ML-based prediction, RAG-backed evidence, LLM-readable explanation, and human-safe operational alerts.
 
-This is not the full KubeSage project.
+KubeSage is currently a focused learning POC — not yet a full production system.
 
 This POC exists to learn:
 
@@ -27,13 +27,13 @@ This POC exists to learn:
 
 ## 2. Final POC Definition
 
-POC-RTML-AGENT-001 uses a two-application setup.
+KubeSage uses a two-application setup.
 
 ```text
 1. Mock Kube Telemetry App
    -> mimics a Kubernetes cluster by streaming pod metrics, app logs, Kubernetes-style events, and controlled failure spikes.
 
-2. POC Intelligence App
+2. KubeSage Intelligence App
    -> receives telemetry from the mock app, buffers live data, builds features, runs trained XGBoost models, invokes decision-making AI agents, retrieves evidence through RAG, calls local LLMs, emits alerts, and displays everything in a React dashboard.
 ```
 
@@ -73,7 +73,7 @@ Export Model Artifacts
 └──────────────┬───────────────┘
                ↓
 ┌──────────────────────────────┐
-│ POC Intelligence App         │
+│ KubeSage Intelligence App         │
 │ - receives telemetry         │
 │ - buffers 30-sec window      │
 │ - builds features            │
@@ -117,7 +117,7 @@ simulate request rate and error rate
 simulate application logs
 simulate Kubernetes-style events
 inject controlled spikes
-stream telemetry to the POC Intelligence App
+stream telemetry to the KubeSage Intelligence App
 ```
 
 ### 4.3 Example Scenarios
@@ -189,11 +189,11 @@ WS   /ws/kube-stream
 
 ---
 
-## 5. Application 2 — POC Intelligence App
+## 5. Application 2 — KubeSage Intelligence App
 
 ### 5.1 Purpose
 
-The POC Intelligence App is the actual AI/ML system.
+The KubeSage Intelligence App is the actual AI/ML system.
 
 It receives live telemetry from the Mock Kube Telemetry App and performs:
 
@@ -1246,7 +1246,7 @@ total_explanation_latency_ms
 ## 20. Project Folder Structure
 
 ```text
-poc-rtml-agent-rag/
+KubeSage/
   README.md
 
   mock-kube-telemetry-app/
@@ -2453,7 +2453,7 @@ Learning verification — the LEARNING_LOG.md entries are your answers:
 2. Where in the pipeline is train-serve skew most likely to occur? How would you detect it?
 3. Why does the LLM narrative need RAG evidence to be trustworthy?
 4. What distinguishes an agent from a service in this system? Name all three agents.
-5. If you were building KubeSage tomorrow using what you learned here, what would
+5. If you were evolving KubeSage into production using what you learned here, what would
    you keep and what would you redesign?
 6. What surprised you most about how the system behaved at runtime vs. how you
    expected it to behave on paper?
@@ -2467,7 +2467,7 @@ The POC is successful if:
 
 ```text
 1. Mock Kube Telemetry App streams telemetry, logs, and events.
-2. POC Intelligence App receives and buffers live telemetry.
+2. KubeSage Intelligence App receives and buffers live telemetry.
 3. XGBoost classifier and regressor are trained and loaded.
 4. Runtime feature vectors are generated from a 30-second rolling window.
 5. Prediction Service produces breach probability and future memory projection.
@@ -2483,7 +2483,7 @@ The POC is successful if:
 
 ---
 
-## 23. How This Maps to KubeSage
+## 23. Production Roadmap
 
 ```text
 Mock telemetry app       -> real Kubernetes / Prometheus / OpenTelemetry source
@@ -2521,7 +2521,7 @@ This POC is a two-application learning system.
 Mock Kube Telemetry App
   -> produces live Kubernetes-style telemetry, logs, events, and spikes
 
-POC Intelligence App
+KubeSage Intelligence App
   -> performs real-time ML prediction, RAG grounding, LLM explanation, AI-agent decision flow, alerts, human approval, and evaluation
 ```
 

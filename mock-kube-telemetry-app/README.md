@@ -1,6 +1,6 @@
 # Mock Kube Telemetry App
 
-Simulates a Kubernetes cluster by streaming pod metrics, application logs, and Kubernetes-style events to the POC Intelligence App.
+Simulates a Kubernetes cluster by streaming pod metrics, application logs, and Kubernetes-style events to the KubeSage Intelligence App.
 
 ## Phase 1 — Contracts
 

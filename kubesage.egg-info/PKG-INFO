@@ -1,5 +1,5 @@
 Metadata-Version: 2.4
-Name: poc-rtml-agent
+Name: kubesage
 Version: 0.1.0
 Summary: Real-Time ML + RAG + LLM Alert Intelligence for Kubernetes Telemetry
 Requires-Python: >=3.9

@@ -23,7 +23,7 @@ def build_model_card(metrics: dict) -> str:
     clf_metrics = classifier["validation_metrics"]
     reg_metrics = regressor["validation_metrics"]
 
-    return f"""# Model Card — POC-RTML-AGENT-001
+    return f"""# Model Card — KubeSage
 
 ## Overview
 

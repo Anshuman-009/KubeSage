@@ -1,4 +1,4 @@
-"""POC Intelligence App schema contracts."""
+"""KubeSage Intelligence App schema contracts."""
 
 from .action import ActionEvent, ActionStatus, ActionType
 from .alert import AlertEvent

@@ -2,7 +2,7 @@
 
 ## Overview
 
-Phase 1 establishes the project skeleton and the data contract layer for POC-RTML-AGENT-001. Two applications — a mock telemetry producer and an intelligence consumer — share a single canonical schema package. All downstream phases (feature engineering, ML, agents, UI) depend on these contracts being stable and validated before any business logic is written.
+Phase 1 establishes the project skeleton and the data contract layer for KubeSage. Two applications — a mock telemetry producer and an intelligence consumer — share a single canonical schema package. All downstream phases (feature engineering, ML, agents, UI) depend on these contracts being stable and validated before any business logic is written.
 
 ---
 
@@ -13,7 +13,7 @@ In a distributed system, components communicate by exchanging structured message
 This POC has two applications with a hard boundary between them:
 
 ```text
-Mock Kube Telemetry App  ──JSON events──►  POC Intelligence App
+Mock Kube Telemetry App  ──JSON events──►  KubeSage Intelligence App
      (producer)                                  (consumer)
 ```
 
@@ -27,7 +27,7 @@ Contracts are defined once in `shared/contracts/` and imported by both apps. Int
 
 ```text
 ┌─────────────────────────────────────────────────────────────────────┐
-│                        POC-RTML-AGENT-001                           │
+│                        KubeSage                           │
 ├──────────────────────────────┬──────────────────────────────────────┤
 │   mock-kube-telemetry-app/   │      poc-intelligence-app/           │
 │                              │                                      │
