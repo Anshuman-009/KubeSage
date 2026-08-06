@@ -10,7 +10,7 @@ Deep architecture and design record for each build phase of POC-RTML-AGENT-001.
 |-------|-------|--------|-----|
 | 01 | Project Setup & Contracts | ✅ Complete | [PHASE_01_Log.md](phases/PHASE_01_Log.md) |
 | 02 | Data Pipeline & Feature Engineering | ✅ Complete | [PHASE_02_Log.md](phases/PHASE_02_Log.md) |
-| 03 | ML Model Training | ⬜ Pending | — |
+| 03 | ML Model Training | ✅ Complete | [PHASE_03_Log.md](phases/PHASE_03_Log.md) |
 | 04 | Mock Kube Telemetry App | ⬜ Pending | — |
 | 05 | Stream Ingestion, Buffer & Prediction Service | ⬜ Pending | — |
 | 06 | Risk Reasoning Agent | ⬜ Pending | — |
@@ -42,6 +42,16 @@ Key decisions: single shared module for train and serve, linear-regression slope
 
 ---
 
+## Phase 03 — ML Model Training
+
+Phase 3 trained two XGBoost models on the 28-column feature matrix from Phase 2. The classifier predicts memory breach probability within 30 seconds (label: ratio ≥ 90%); the regressor predicts future memory in MB. Artifacts include JSON model files, validation metrics, feature importance plots, and a model card. Classifier validation: precision 0.985, recall 1.0, ROC-AUC 1.0. Regressor validation: MAE 7.2 MB, R² 0.997.
+
+Key decisions: separate classifier/regressor, `scale_pos_weight` for ~6.5% positive rate, stratified classifier split, XGBoost JSON export for Phase 5 runtime loading.
+
+**Full log** → [phases/PHASE_03_Log.md](phases/PHASE_03_Log.md)
+
+---
+
 ## Upcoming phases
 
-Phases 03–11 will be documented here as each completes.
+Phases 04–11 will be documented here as each completes.

@@ -26,7 +26,7 @@ Traditional development roadmap. Each phase ships a working component. Documenta
 **Status** → Complete
 
 **Deliverables:**
-- `ml-training/build_features.py` — rolling window feature builder
+- `ml_training/build_features.py` — rolling window feature builder
 - `models/feature_schema.json` — versioned feature contract
 - Validated output against `dataset/derived/derived_features.csv`
 
@@ -41,11 +41,11 @@ Traditional development roadmap. Each phase ships a working component. Documenta
 
 ## Phase 3 — ML Model Training
 
-**Status** → Pending
+**Status** → Complete
 
 **Deliverables:**
-- `ml-training/train_classifier.py` — XGBClassifier (breach probability)
-- `ml-training/train_regressor.py` — XGBRegressor (future memory)
+- `ml_training/train_classifier.py` — XGBClassifier (breach probability)
+- `ml_training/train_regressor.py` — XGBRegressor (future memory)
 - `models/memory_breach_xgb_classifier.json`
 - `models/future_memory_xgb_regressor.json`
 - `models/training_metrics.json`
