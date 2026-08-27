@@ -2,7 +2,7 @@
 
 **Real-time ML + RAG + LLM alert intelligence for Kubernetes telemetry.**
 
-KubeSage is a POC that simulates how a production SRE assistant would work: detect workload risk from live pod metrics, ground predictions in operational evidence, explain what is happening in plain language, and route risky actions through human approval.
+KubeSage is a project that simulates how a production SRE assistant would work: detect workload risk from live pod metrics, ground predictions in operational evidence, explain what is happening in plain language, and route risky actions through human approval.
 
 ---
 
